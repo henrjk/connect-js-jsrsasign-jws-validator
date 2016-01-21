@@ -1,0 +1,58 @@
+{
+  "name": "anvil-connect-js-jsrsasign-jws-validator",
+  "version": "0.1.0",
+  "description": "Fallback JWS validation module using jsrsasign for anil-connect-js browser library.",
+  "main": "src/jws-validator-jsrsasign.js",
+  "scripts": {
+    "karma-browsers": "karma start --browsers Chrome",
+    "karma": "karma run",
+    "lint": "eslint --ignore-path .gitignore src && echo Source code looks good!",
+    "test": "karma start --single-run && npm run lint",
+    "test-chrome": "karma start --browsers Chrome --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrjk/connect-js-jsrsasign-jws-validator.git"
+  },
+  "author": "Henrich Krämer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henrjk/connect-js-jsrsasign-jws-validator/issues"
+  },
+  "homepage": "https://github.com/henrjk/connect-js-jsrsasign-jws-validator#readme",
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-plugin-standard": "^1.3.1",
+    "jasmine-core": "^2.4.1",
+    "jspm": "^0.16.24",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-jspm": "^2.0.2"
+  },
+  "jspm": {
+    "dependencies": {
+      "bows": "npm:bows@^1.4.8",
+      "crypto-js": "github:brix/crypto-js@^3.1.6",
+      "jsrsasign": "github:kjur/jsrsasign@^5.0.5"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    },
+    "overrides": {
+      "github:brix/crypto-js@3.1.6": {
+        "format": "global"
+      },
+      "github:kjur/jsrsasign@5.0.5": {
+        "format": "global",
+        "map": {
+          "fs": "@empty",
+          "jsrsasign": "@empty"
+        }
+      }
+    }
+  }
+}
