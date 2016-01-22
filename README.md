@@ -5,7 +5,7 @@ Anvil Connect JavaScript Client library.
 
 **CAUTION: This is work in progress. It may go away at any time.**
 
-Work is under way at anvilreasearch/connect-js#7 to implement the browser library to
+Work is under way at anvilresearch/connect-js#7 to implement the browser library to
 access Anvil Connect to use the WebCrypto APIs.
 
 The new code structure calls out an JWS validator module. Connect-js implementation
